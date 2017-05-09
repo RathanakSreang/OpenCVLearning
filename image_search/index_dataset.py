@@ -1,4 +1,4 @@
-from rgbhistogram import RGBHistogram
+from packages.rgbhistogram import RGBHistogram
 import argparse
 import cPickle
 import glob
@@ -7,8 +7,8 @@ import cv2
 # constuct the argument parser and parse the argument
 ap = argparse.ArgumentParser()
 ap.add_argument("-d", "--dataset", required= True, help="Path to directory that contains the images to be indexed")
-ap.add_argument("-i", "--index", require=True, help="Path to where the compute index will be stored")
-args = vars(ap.parse_rgs())
+ap.add_argument("-i", "--index", required=True, help="Path to where the compute index will be stored")
+args = vars(ap.parse_args())
 
 # initialize the index dictionary to store out our quantifed.
 # images, with the 'key' of the dictionary of images
@@ -19,7 +19,7 @@ index = {}
 desc = RGBHistogram([8,8,8])
 
 #use glob to grab the image path and loop over them
-for imagePath in glob.glob(rgs["dataset"] + "/*.png"):
+for imagePath in glob.glob(args["dataset"] + "/*.png"):
     # extract our unique image ID (i.e: file name)
     k = imagePath[imagePath.rfind("/") + 1 :]
 
@@ -33,3 +33,5 @@ f = open(args["index"], "w")
 f.write(cPickle.dumps(index))
 f.close()
 
+#show info
+print "done... index %d images" % (len(index))

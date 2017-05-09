@@ -1,6 +1,6 @@
 import numpy as np
 
-class Search:
+class Searcher:
     def __init__(self, index):
         self.index = index
 
@@ -13,19 +13,19 @@ class Search:
             # compute the chi-squared betweeen the feature
             # in index and queryFeature use chi-square distance which is normally
             # use in computer vision for histogram comparing
-            d = self.chi2_distance(features, queryFeature)
+            d = self.chi2_distance(features, queryFeatures)
 
             # update the result directory
             results[k] = d
 
         # let's sort our result
-        results = sorted([(v,k) for (v,k)in results.items()])
+        results = sorted([(v, k) for (k, v) in results.items()])
 
         return results
 
-    def ch2_distance(self, histA, histB, eps = 1e-10):
-        d = 0.5 * np.sum([((a-b)**2)/(a+b+eps) for (a,b)in zip(histA, histB)])
-
+    def chi2_distance(self, histA, histB, eps = 1e-10):
+        d = 0.5 * np.sum([((a - b) ** 2) / (a + b + eps)
+                        for (a, b) in zip(histA, histB)])
         return d
 
 
