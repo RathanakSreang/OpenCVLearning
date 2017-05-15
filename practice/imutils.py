@@ -17,3 +17,16 @@ def rotate(image, angle, center = None, scale = 1.0):
 
     return rotated
 
+def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
+    (h,w) = image.shape[:2]
+
+    if width is None and height is None:
+        return image
+    elif width is None:
+        radio = height / float(h)
+        dim = (int(w * radio), height)
+    else:
+        radio = width / float(w)
+        dim = (width, int(h * radio))
+    resized = cv2.resize(image, dim, interpolation = inter)
+    return resized
