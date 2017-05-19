@@ -1,0 +1,93 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+EyeDetector	../packages/eye_detector.py	/^class EyeDetector:$/;"	kind:class	line:3
+FaceDetector	../packages/facedetector.py	/^class FaceDetector:$/;"	kind:class	line:3
+HOG	../packages/hog.py	/^class HOG:$/;"	kind:class	line:3
+T	../classify.py	/^        T = mahotas.thresholding.otsu(roi)$/;"	kind:variable	line:36
+__init__	../packages/eye_detector.py	/^  def __init__(self, faceCascadePath, eyeCascadePath):$/;"	kind:member	line:4
+__init__	../packages/facedetector.py	/^  def __init__(self, faceCascadePath):$/;"	kind:member	line:4
+__init__	../packages/hog.py	/^  def __init__(self, orientations = 9, pixelsPerCell = (8,8),$/;"	kind:member	line:4
+__init__.py	../packages/__init__.py	1;"	kind:file	line:1
+ap	../classify.py	/^ap = argparse.ArgumentParser()$/;"	kind:variable	line:8
+ap	../eye_tracking.py	/^ap = argparse.ArgumentParser()$/;"	kind:variable	line:6
+ap	../face_detection.py	/^ap = argparse.ArgumentParser()$/;"	kind:variable	line:6
+ap	../read_color.py	/^ap = argparse.ArgumentParser()$/;"	kind:variable	line:5
+ap	../train.py	/^ap = argparse.ArgumentParser()$/;"	kind:variable	line:8
+ap	../webcame_face_detection.py	/^ap = argparse.ArgumentParser()$/;"	kind:variable	line:6
+args	../classify.py	/^args = vars(ap.parse_args())$/;"	kind:variable	line:11
+args	../eye_tracking.py	/^args = vars(ap.parse_args())$/;"	kind:variable	line:9
+args	../face_detection.py	/^args = vars(ap.parse_args())$/;"	kind:variable	line:9
+args	../read_color.py	/^args = vars(ap.parse_args())$/;"	kind:variable	line:7
+args	../train.py	/^args = vars(ap.parse_args())$/;"	kind:variable	line:11
+args	../webcame_face_detection.py	/^args = vars(ap.parse_args())$/;"	kind:variable	line:8
+blurred	../classify.py	/^blurred = cv2.GaussianBlur(gray, (5,5), 0)$/;"	kind:variable	line:23
+cap	../eye_tracking.py	/^cap = cv2.VideoCapture(0)$/;"	kind:variable	line:11
+cap	../track_obj.py	/^cap = cv2.VideoCapture(0)$/;"	kind:variable	line:17
+cap	../webcame_face_detection.py	/^cap = cv2.VideoCapture(0)$/;"	kind:variable	line:10
+center_extent	../packages/dataset.py	/^def center_extent(image, size):$/;"	kind:function	line:28
+classify.py	../classify.py	1;"	kind:file	line:1
+cnt	../track_obj.py	/^      cnt = sorted(ctns, key = cv2.contourArea, reverse = True)[0]$/;"	kind:variable	line:28
+cnts	../classify.py	/^cnts = sorted([(c, cv2.boundingRect(c)[0]) for c in cnts], key = lambda x: x[1])$/;"	kind:variable	line:27
+color	../track_obj.py	/^    color = cv2.GaussianBlur(color, (5,5), 0)$/;"	kind:variable	line:25
+color	../track_obj.py	/^    color = cv2.inRange(frame, colorLower, colorUpper)$/;"	kind:variable	line:24
+colorLower	../track_obj.py	/^colorLower = np.array([17, 15, 100], dtype="uint8")$/;"	kind:variable	line:14
+colorUpper	../track_obj.py	/^colorUpper = np.array([50, 56, 200], dtype="uint8")$/;"	kind:variable	line:15
+data	../train.py	/^data = []$/;"	kind:variable	line:17
+dataset.py	../packages/dataset.py	1;"	kind:file	line:1
+describe	../packages/hog.py	/^  def describe(self, image):$/;"	kind:member	line:11
+deskew	../packages/dataset.py	/^def deskew(image, width):$/;"	kind:function	line:16
+detect	../packages/facedetector.py	/^  def detect(self, image, scaleFactor = 1.1, minNeighbors = 5, minSize =(30,30)):$/;"	kind:member	line:7
+digit	../classify.py	/^        digit = model.predict(hist)[0]$/;"	kind:variable	line:46
+ed	../eye_tracking.py	/^ed = EyeDetector(args["face"], args["eye"])$/;"	kind:variable	line:15
+edged	../classify.py	/^edged = cv2.Canny(blurred, 30, 150)$/;"	kind:variable	line:24
+eye_detector.py	../packages/eye_detector.py	1;"	kind:file	line:1
+eye_tracking.py	../eye_tracking.py	1;"	kind:file	line:1
+f	../train.py	/^f = open(args["model"], "w")$/;"	kind:variable	line:33
+faceRects	../eye_tracking.py	/^    faceRects = ed.track(gray)$/;"	kind:variable	line:24
+faceRects	../face_detection.py	/^faceRects = fd.detect(gray, scaleFactor = 1.1, minNeighbors = 3, minSize = (30,30))$/;"	kind:variable	line:17
+faceRects	../webcame_face_detection.py	/^    faceRects = fd.detect(gray, scaleFactor =1.1, minNeighbors =3, minSize =(30,30))$/;"	kind:variable	line:23
+face_detection.py	../face_detection.py	1;"	kind:file	line:1
+facedetector.py	../packages/facedetector.py	1;"	kind:file	line:1
+fd	../face_detection.py	/^fd = FaceDetector(args["face"])$/;"	kind:variable	line:16
+fd	../webcame_face_detection.py	/^fd = FaceDetector(args["face"])$/;"	kind:variable	line:14
+frame	../eye_tracking.py	/^    frame = imutils.resize(frame, height=400)$/;"	kind:variable	line:21
+frame	../track_obj.py	/^    frame = imutils.resize(frame, height = 400)$/;"	kind:variable	line:23
+frame	../webcame_face_detection.py	/^    frame = imutils.resize(frame, height=400)$/;"	kind:variable	line:20
+gray	../classify.py	/^gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:21
+gray	../eye_tracking.py	/^    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:22
+gray	../face_detection.py	/^gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:14
+gray	../webcame_face_detection.py	/^    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:21
+hist	../classify.py	/^        hist = hog.describe(thresh)$/;"	kind:variable	line:45
+hist	../train.py	/^    hist = hog.describe(image)$/;"	kind:variable	line:25
+hog	../classify.py	/^hog = HOG(orientations = 18, pixelsPerCell = (10,10), cellsPerBlock=(1,1), transform_sqrt= True)$/;"	kind:variable	line:17
+hog	../train.py	/^hog = HOG(orientations = 18, pixelsPerCell =(10, 10), cellsPerBlock = (1,1), transform_sqrt = True)$/;"	kind:variable	line:19
+hog.py	../packages/hog.py	1;"	kind:file	line:1
+image	../classify.py	/^image = cv2.imread(args["image"])$/;"	kind:variable	line:20
+image	../face_detection.py	/^image = cv2.imread(args["image"])$/;"	kind:variable	line:11
+image	../face_detection.py	/^image = imutils.resize(image, height=500)$/;"	kind:variable	line:12
+image	../read_color.py	/^image = cv2.imread(args["image"])$/;"	kind:variable	line:9
+image	../train.py	/^    image = dataset.center_extent(image, (20, 20))$/;"	kind:variable	line:23
+image	../train.py	/^    image = dataset.deskew(image, 20)$/;"	kind:variable	line:22
+imutils.py	../packages/imutils.py	1;"	kind:file	line:1
+load_data	../packages/dataset.py	/^def load_data(datasetPath):$/;"	kind:function	line:6
+model	../classify.py	/^model = cPickle.loads(model)$/;"	kind:variable	line:15
+model	../classify.py	/^model = open(args["model"]).read()$/;"	kind:variable	line:14
+model	../train.py	/^model = LinearSVC(random_state= 42)$/;"	kind:variable	line:30
+read_color.py	../read_color.py	1;"	kind:file	line:1
+rect	../track_obj.py	/^      rect = np.int32(cv2.boxPoints(cv2.minAreaRect(cnt)))$/;"	kind:variable	line:29
+resize	../packages/imutils.py	/^def resize(image, width = None, height = None, inter = cv2.INTER_AREA):$/;"	kind:function	line:20
+roi	../classify.py	/^        roi = gray[y:y+h, x: x+w]$/;"	kind:variable	line:33
+rotate	../packages/imutils.py	/^def rotate(image, angle, center = None, scale = 1.0):$/;"	kind:function	line:9
+thresh	../classify.py	/^        thresh =  dataset.deskew(thresh, 20)$/;"	kind:variable	line:40
+thresh	../classify.py	/^        thresh = cv2.bitwise_not(thresh)$/;"	kind:variable	line:38
+thresh	../classify.py	/^        thresh = dataset.center_extent(thresh, (20,20))$/;"	kind:variable	line:41
+thresh	../classify.py	/^        thresh = roi.copy()$/;"	kind:variable	line:35
+track	../packages/eye_detector.py	/^  def track(self, image):$/;"	kind:member	line:8
+track_obj.py	../track_obj.py	1;"	kind:file	line:1
+train.py	../train.py	1;"	kind:file	line:1
+translate	../packages/imutils.py	/^def translate(image, x,y):$/;"	kind:function	line:4
+webcame_face_detection.py	../webcame_face_detection.py	1;"	kind:file	line:1

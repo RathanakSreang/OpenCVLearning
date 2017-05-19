@@ -8,6 +8,8 @@ def load_data(datasetPath):
 
   target = data[:, 0]
   data = data[:, 1:].reshape(data.shape[0], 28, 28)
+  # target = data[1:2, 0]
+  # data = data[1:2, 1:].reshape(1, 28, 28)
 
   return (data, target)
 
@@ -24,7 +26,7 @@ def deskew(image, width):
   return image
 
 def center_extent(image, size):
-  (eH, eW) = size
+  (eW, eH) = size
 
   if image.shape[1] > image.shape[0]:
     image = imutils.resize(image, width= eW)
@@ -35,11 +37,11 @@ def center_extent(image, size):
   offsetX = (eW - image.shape[1]) / 2
   offsetY = (eH - image.shape[0]) / 2
 
-  extent[offsetY:offsetY + image.shape[0], offsetX: offsetY _ image.shape[1]] = image
+  extent[offsetY:offsetY + image.shape[0], offsetX: offsetX + image.shape[1]] = image
 
   CM = mahotas.center_of_mass(extent)
   (cY, cX) = np.round(CM).astype("int32")
   (dX, dY) = ((size[0] / 2) - cX, (size[1] /2) - cY)
-  M = np.float32([[1, 0, dX], [1, 0, dY]])
+  M = np.float32([[1, 0, dX], [0, 1, dY]])
   extent = cv2.warpAffine(extent, M, size)
   return extent
